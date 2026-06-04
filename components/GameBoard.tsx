@@ -65,7 +65,7 @@ export default function GameBoard({ theme, onBack }: GameBoardProps) {
 
   return (
     <div
-      className={`min-h-screen w-full flex flex-col bg-gradient-to-br ${theme.bg} overflow-y-auto no-scrollbar`}
+      className={`h-screen w-full flex flex-col bg-gradient-to-br ${theme.bg} overflow-y-auto no-scrollbar`}
     >
       {/* Top bar */}
       <div className="flex items-center justify-between px-3 py-3 flex-shrink-0">
