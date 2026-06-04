@@ -49,8 +49,8 @@ export default function BabyButton({ item, onTap }: BabyButtonProps) {
         clientY = (e as React.MouseEvent).clientY
       }
 
-      // Play sound
-      playSound(item.sound)
+      // Play sound (real audio if available, otherwise oscillator)
+      playSound(item.sound, item.audioUrl)
 
       // Trigger animation
       setAnimClass('')

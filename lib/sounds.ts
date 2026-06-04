@@ -13,12 +13,38 @@ function getAudioContext(): AudioContext | null {
   }
 }
 
-export function playSound(config: SoundConfig): void {
+// Cache loaded Audio objects to avoid re-fetching on every tap
+const audioCache: Record<string, HTMLAudioElement> = {}
+
+export function playAudioUrl(url: string): void {
+  try {
+    if (!audioCache[url]) {
+      const audio = new Audio(url)
+      audio.preload = 'auto'
+      audioCache[url] = audio
+    }
+    const audio = audioCache[url]
+    audio.currentTime = 0
+    audio.volume = 1
+    audio.play().catch(() => {
+      // Autoplay blocked or network error — silently ignored
+    })
+  } catch {
+    // Silently fail
+  }
+}
+
+export function playSound(config: SoundConfig, audioUrl?: string): void {
+  // If a real audio URL is provided, use it and skip oscillator
+  if (audioUrl) {
+    playAudioUrl(audioUrl)
+    return
+  }
+
   try {
     const ctx = getAudioContext()
     if (!ctx) return
 
-    // Resume context if suspended (required after user gesture on some browsers)
     if (ctx.state === 'suspended') {
       ctx.resume()
     }
@@ -32,7 +58,6 @@ export function playSound(config: SoundConfig): void {
     oscillator.type = config.type
     oscillator.frequency.setValueAtTime(config.freq, ctx.currentTime)
 
-    // Add a slight frequency sweep for character
     oscillator.frequency.exponentialRampToValueAtTime(
       config.freq * 1.05,
       ctx.currentTime + config.duration * 0.3
@@ -42,7 +67,6 @@ export function playSound(config: SoundConfig): void {
       ctx.currentTime + config.duration
     )
 
-    // Envelope: attack → sustain → release
     gainNode.gain.setValueAtTime(0, ctx.currentTime)
     gainNode.gain.linearRampToValueAtTime(0.35, ctx.currentTime + 0.03)
     gainNode.gain.setValueAtTime(0.35, ctx.currentTime + config.duration * 0.6)
@@ -51,7 +75,7 @@ export function playSound(config: SoundConfig): void {
     oscillator.start(ctx.currentTime)
     oscillator.stop(ctx.currentTime + config.duration)
   } catch {
-    // Silently fail — audio not critical
+    // Silently fail
   }
 }
 
