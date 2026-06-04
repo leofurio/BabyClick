@@ -50,7 +50,7 @@ export const themes: Theme[] = [
         label: 'Cow',
         color: '#f0e6c8',
         sound: { freq: 220, type: 'sine', duration: 0.6 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Moo.ogg',
+        audioUrl: '/sounds/cow.wav',
         animation: 'bounce',
       },
       {
@@ -59,7 +59,7 @@ export const themes: Theme[] = [
         label: 'Pig',
         color: '#ffb3c6',
         sound: { freq: 330, type: 'sine', duration: 0.4 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Pig_oink.ogg',
+        audioUrl: '/sounds/pig.wav',
         animation: 'wiggle',
       },
       {
@@ -68,7 +68,7 @@ export const themes: Theme[] = [
         label: 'Chicken',
         color: '#fff3b0',
         sound: { freq: 440, type: 'triangle', duration: 0.3 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/73/010_Cogburn_and_hens.ogg',
+        audioUrl: '/sounds/chicken.wav',
         animation: 'shake',
       },
       {
@@ -77,7 +77,7 @@ export const themes: Theme[] = [
         label: 'Horse',
         color: '#d4a574',
         sound: { freq: 196, type: 'sine', duration: 0.7 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Horse_-_Jeremy_Weate.ogg',
+        audioUrl: '/sounds/horse.wav',
         animation: 'bounce',
       },
       {
@@ -86,7 +86,7 @@ export const themes: Theme[] = [
         label: 'Sheep',
         color: '#e8e8e8',
         sound: { freq: 262, type: 'sine', duration: 0.5 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Sheep_bleating_converted.ogg',
+        audioUrl: '/sounds/sheep.wav',
         animation: 'grow',
       },
       {
@@ -95,7 +95,7 @@ export const themes: Theme[] = [
         label: 'Duck',
         color: '#ffe066',
         sound: { freq: 370, type: 'triangle', duration: 0.35 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Limpkin_and_duck.ogg',
+        audioUrl: '/sounds/duck.wav',
         animation: 'wiggle',
       },
       {
@@ -104,7 +104,7 @@ export const themes: Theme[] = [
         label: 'Dog',
         color: '#c8a97e',
         sound: { freq: 294, type: 'sine', duration: 0.4 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Barking_of_a_dog.ogg',
+        audioUrl: '/sounds/dog.wav',
         animation: 'bounce',
       },
       {
@@ -113,7 +113,7 @@ export const themes: Theme[] = [
         label: 'Cat',
         color: '#f4b8d1',
         sound: { freq: 392, type: 'sine', duration: 0.45 },
-        audioUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Cat_crying_-_purring.ogg',
+        audioUrl: '/sounds/cat.wav',
         animation: 'spin',
       },
     ],
