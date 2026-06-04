@@ -72,11 +72,11 @@ export default function GameBoard({ theme, onBack }: GameBoardProps) {
         {/* Back button */}
         <button
           onClick={onBack}
-          className="flex items-center gap-1 bg-white/30 backdrop-blur-sm rounded-full px-4 py-2 shadow border-2 border-white/50 active:scale-90 transition-transform"
-          style={{ fontFamily: "'Fredoka One', cursive", fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: 'white' }}
+          className="flex items-center gap-1 bg-white rounded-full px-4 py-2 shadow-md border-2 border-gray-200 active:scale-90 transition-transform"
+          style={{ fontFamily: "'Fredoka One', cursive", fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: '#374151' }}
           aria-label="Back to theme selector"
         >
-          ◀ Back
+          ◀ Indietro
         </button>
 
         {/* Theme label */}
@@ -91,17 +91,12 @@ export default function GameBoard({ theme, onBack }: GameBoardProps) {
         {/* Fullscreen button */}
         <button
           onClick={toggleFullscreen}
-          className="flex items-center gap-1 bg-white/30 backdrop-blur-sm rounded-full px-4 py-2 shadow border-2 border-white/50 active:scale-90 transition-transform"
-          style={{ fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: 'white' }}
-          aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+          className="flex items-center gap-1 bg-white rounded-full px-4 py-2 shadow-md border-2 border-gray-200 active:scale-90 transition-transform"
+          style={{ fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: '#374151', fontFamily: "'Fredoka One', cursive" }}
+          aria-label={isFullscreen ? 'Esci schermo intero' : 'Schermo intero'}
         >
-          {isFullscreen ? '⛶' : '⛶'}
-          <span
-            className="ml-1"
-            style={{ fontFamily: "'Fredoka One', cursive" }}
-          >
-            {isFullscreen ? 'Exit' : 'Full'}
-          </span>
+          {isFullscreen ? '🔲' : '⛶'}
+          <span className="ml-1">{isFullscreen ? 'Esci' : 'Pieno'}</span>
         </button>
       </div>
 

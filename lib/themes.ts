@@ -162,6 +162,7 @@ export const themes: Theme[] = [
         label: 'Rocket',
         color: '#4f46e5',
         sound: { freq: 880, type: 'sawtooth', duration: 0.5 },
+        audioUrl: '/sounds/rocket.wav',
         animation: 'grow',
       },
       {
@@ -170,6 +171,7 @@ export const themes: Theme[] = [
         label: 'Star',
         color: '#fbbf24',
         sound: { freq: 1046, type: 'sine', duration: 0.3 },
+        audioUrl: '/sounds/star.wav',
         animation: 'spin',
       },
       {
@@ -178,6 +180,7 @@ export const themes: Theme[] = [
         label: 'Moon',
         color: '#c4b5fd',
         sound: { freq: 523, type: 'sine', duration: 0.6 },
+        audioUrl: '/sounds/moon.wav',
         animation: 'bounce',
       },
       {
@@ -186,6 +189,7 @@ export const themes: Theme[] = [
         label: 'Planet',
         color: '#7c3aed',
         sound: { freq: 349, type: 'sine', duration: 0.7 },
+        audioUrl: '/sounds/planet.wav',
         animation: 'spin',
       },
       {
@@ -194,6 +198,7 @@ export const themes: Theme[] = [
         label: 'Alien',
         color: '#10b981',
         sound: { freq: 659, type: 'square', duration: 0.4 },
+        audioUrl: '/sounds/alien.wav',
         animation: 'wiggle',
       },
       {
@@ -202,6 +207,7 @@ export const themes: Theme[] = [
         label: 'UFO',
         color: '#6ee7b7',
         sound: { freq: 784, type: 'triangle', duration: 0.45 },
+        audioUrl: '/sounds/ufo.wav',
         animation: 'shake',
       },
       {
@@ -210,6 +216,7 @@ export const themes: Theme[] = [
         label: 'Comet',
         color: '#fcd34d',
         sound: { freq: 440, type: 'sawtooth', duration: 0.3 },
+        audioUrl: '/sounds/comet.wav',
         animation: 'spin',
       },
       {
@@ -218,6 +225,7 @@ export const themes: Theme[] = [
         label: 'Astronaut',
         color: '#93c5fd',
         sound: { freq: 587, type: 'sine', duration: 0.5 },
+        audioUrl: '/sounds/astronaut.wav',
         animation: 'bounce',
       },
     ],
@@ -266,6 +274,7 @@ export const themes: Theme[] = [
         label: 'Fish',
         color: '#f97316',
         sound: { freq: 523, type: 'sine', duration: 0.35 },
+        audioUrl: '/sounds/fish.wav',
         animation: 'wiggle',
       },
       {
@@ -274,6 +283,7 @@ export const themes: Theme[] = [
         label: 'Whale',
         color: '#0ea5e9',
         sound: { freq: 165, type: 'sine', duration: 0.9 },
+        audioUrl: '/sounds/whale.wav',
         animation: 'bounce',
       },
       {
@@ -282,6 +292,7 @@ export const themes: Theme[] = [
         label: 'Octopus',
         color: '#ec4899',
         sound: { freq: 311, type: 'sine', duration: 0.5 },
+        audioUrl: '/sounds/octopus.wav',
         animation: 'shake',
       },
       {
@@ -290,6 +301,7 @@ export const themes: Theme[] = [
         label: 'Crab',
         color: '#ef4444',
         sound: { freq: 415, type: 'triangle', duration: 0.4 },
+        audioUrl: '/sounds/crab.wav',
         animation: 'wiggle',
       },
       {
@@ -298,6 +310,7 @@ export const themes: Theme[] = [
         label: 'Dolphin',
         color: '#38bdf8',
         sound: { freq: 698, type: 'sine', duration: 0.4 },
+        audioUrl: '/sounds/dolphin.wav',
         animation: 'bounce',
       },
       {
@@ -306,6 +319,7 @@ export const themes: Theme[] = [
         label: 'Turtle',
         color: '#22c55e',
         sound: { freq: 247, type: 'sine', duration: 0.6 },
+        audioUrl: '/sounds/turtle.wav',
         animation: 'spin',
       },
       {
@@ -314,6 +328,7 @@ export const themes: Theme[] = [
         label: 'Starfish',
         color: '#fbbf24',
         sound: { freq: 587, type: 'triangle', duration: 0.3 },
+        audioUrl: '/sounds/starfish.wav',
         animation: 'spin',
       },
       {
@@ -322,6 +337,7 @@ export const themes: Theme[] = [
         label: 'Shark',
         color: '#94a3b8',
         sound: { freq: 185, type: 'sawtooth', duration: 0.5 },
+        audioUrl: '/sounds/shark.wav',
         animation: 'grow',
       },
     ],
@@ -370,6 +386,7 @@ export const themes: Theme[] = [
         label: 'Strawberry',
         color: '#ef4444',
         sound: { freq: 659, type: 'sine', duration: 0.3 },
+        audioUrl: '/sounds/strawberry.wav',
         animation: 'bounce',
       },
       {
@@ -378,6 +395,7 @@ export const themes: Theme[] = [
         label: 'Banana',
         color: '#fde047',
         sound: { freq: 523, type: 'sine', duration: 0.35 },
+        audioUrl: '/sounds/banana.wav',
         animation: 'wiggle',
       },
       {
@@ -386,6 +404,7 @@ export const themes: Theme[] = [
         label: 'Watermelon',
         color: '#86efac',
         sound: { freq: 349, type: 'sine', duration: 0.5 },
+        audioUrl: '/sounds/watermelon.wav',
         animation: 'grow',
       },
       {
@@ -394,6 +413,7 @@ export const themes: Theme[] = [
         label: 'Orange',
         color: '#fb923c',
         sound: { freq: 440, type: 'sine', duration: 0.35 },
+        audioUrl: '/sounds/orange.wav',
         animation: 'bounce',
       },
       {
@@ -402,6 +422,7 @@ export const themes: Theme[] = [
         label: 'Grapes',
         color: '#a855f7',
         sound: { freq: 587, type: 'triangle', duration: 0.3 },
+        audioUrl: '/sounds/grapes.wav',
         animation: 'shake',
       },
       {
@@ -410,6 +431,7 @@ export const themes: Theme[] = [
         label: 'Pineapple',
         color: '#fbbf24',
         sound: { freq: 392, type: 'triangle', duration: 0.4 },
+        audioUrl: '/sounds/pineapple.wav',
         animation: 'spin',
       },
       {
@@ -418,6 +440,7 @@ export const themes: Theme[] = [
         label: 'Apple',
         color: '#f87171',
         sound: { freq: 494, type: 'sine', duration: 0.35 },
+        audioUrl: '/sounds/apple.wav',
         animation: 'bounce',
       },
       {
@@ -426,6 +449,7 @@ export const themes: Theme[] = [
         label: 'Cherry',
         color: '#dc2626',
         sound: { freq: 784, type: 'sine', duration: 0.25 },
+        audioUrl: '/sounds/cherry.wav',
         animation: 'wiggle',
       },
     ],
