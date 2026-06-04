@@ -60,13 +60,14 @@ export default function Carousel({ slides }: CarouselProps) {
     <div className="w-full flex flex-col items-center gap-3">
       {/* Slide display */}
       <div
-        className={`
-          w-full rounded-3xl overflow-hidden shadow-xl
-          bg-gradient-to-br ${slide.bg}
-          flex flex-col items-center justify-center
-          relative select-none
-        `}
-        style={{ minHeight: 180, touchAction: 'pan-y' }}
+        className="w-full rounded-3xl overflow-hidden shadow-xl flex flex-col items-center justify-center relative select-none"
+        style={{
+          minHeight: 180,
+          touchAction: 'pan-y',
+          background: slide.animatedBg ?? `var(--slide-bg, #a1c4fd)`,
+          backgroundSize: '400% 400%',
+          animation: 'rainbowPulse 6s ease infinite',
+        }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}

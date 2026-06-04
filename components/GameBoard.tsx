@@ -65,7 +65,12 @@ export default function GameBoard({ theme, onBack }: GameBoardProps) {
 
   return (
     <div
-      className={`h-screen w-full flex flex-col bg-gradient-to-br ${theme.bg} overflow-y-auto no-scrollbar`}
+      className="h-screen w-full flex flex-col overflow-y-auto no-scrollbar"
+      style={{
+        background: theme.animatedBg,
+        backgroundSize: '400% 400%',
+        animation: 'rainbowPulse 8s ease infinite',
+      }}
     >
       {/* Top bar */}
       <div className="flex items-center justify-between px-3 py-3 flex-shrink-0">

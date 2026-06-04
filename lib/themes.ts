@@ -19,6 +19,7 @@ export type ThemeItem = {
 export type Slide = {
   id: string
   bg: string
+  animatedBg?: string
   title: string
   scene: string // large emoji scene
   description: string
@@ -31,6 +32,7 @@ export type Theme = {
   bg: string
   accent: string
   buttonBg: string
+  animatedBg: string   // CSS gradient for animated background
   items: ThemeItem[]
   slides: Slide[]
 }
@@ -43,6 +45,7 @@ export const themes: Theme[] = [
     bg: 'from-green-300 via-yellow-200 to-green-400',
     accent: 'text-green-700',
     buttonBg: 'bg-green-500',
+    animatedBg: 'linear-gradient(135deg, #86efac, #fde68a, #6ee7b7, #fbbf24, #a7f3d0)',
     items: [
       {
         id: 'cow',
@@ -121,6 +124,7 @@ export const themes: Theme[] = [
       {
         id: 'farm1',
         bg: 'from-sky-300 to-green-400',
+        animatedBg: 'linear-gradient(135deg, #7dd3fc, #86efac, #6ee7b7, #34d399, #bef264)',
         title: 'The Farm',
         scene: '🌾🐄🌾',
         description: 'A happy cow on the farm!',
@@ -128,6 +132,7 @@ export const themes: Theme[] = [
       {
         id: 'farm2',
         bg: 'from-yellow-300 to-orange-300',
+        animatedBg: 'linear-gradient(135deg, #fde68a, #fdba74, #fbbf24, #fb923c, #fef08a)',
         title: 'Sunny Day',
         scene: '☀️🐓🌻',
         description: 'The rooster greets the sun!',
@@ -135,6 +140,7 @@ export const themes: Theme[] = [
       {
         id: 'farm3',
         bg: 'from-pink-300 to-red-300',
+        animatedBg: 'linear-gradient(135deg, #f9a8d4, #fca5a5, #fb7185, #f472b6, #fda4af)',
         title: 'Pig Pen',
         scene: '🐷🌈🐷',
         description: 'Piggies love to play!',
@@ -142,6 +148,7 @@ export const themes: Theme[] = [
       {
         id: 'farm4',
         bg: 'from-green-400 to-emerald-500',
+        animatedBg: 'linear-gradient(135deg, #4ade80, #34d399, #6ee7b7, #a7f3d0, #86efac)',
         title: 'Meadow',
         scene: '🐑🌿🌸',
         description: 'Fluffy sheep in the meadow!',
@@ -155,6 +162,7 @@ export const themes: Theme[] = [
     bg: 'from-indigo-900 via-purple-800 to-blue-900',
     accent: 'text-yellow-300',
     buttonBg: 'bg-indigo-600',
+    animatedBg: 'linear-gradient(135deg, #1e1b4b, #4c1d95, #1e3a8a, #312e81, #0f172a)',
     items: [
       {
         id: 'rocket',
@@ -233,6 +241,7 @@ export const themes: Theme[] = [
       {
         id: 'space1',
         bg: 'from-indigo-900 to-purple-900',
+        animatedBg: 'linear-gradient(135deg, #1e1b4b, #4c1d95, #312e81, #3730a3, #1e3a8a)',
         title: 'Blast Off!',
         scene: '🚀✨🌟',
         description: '3... 2... 1... Blast off!',
@@ -240,6 +249,7 @@ export const themes: Theme[] = [
       {
         id: 'space2',
         bg: 'from-blue-900 to-indigo-800',
+        animatedBg: 'linear-gradient(135deg, #1e3a8a, #1e1b4b, #0f172a, #312e81, #172554)',
         title: 'The Moon',
         scene: '🌙⭐🌙',
         description: 'Twinkle twinkle little star!',
@@ -247,6 +257,7 @@ export const themes: Theme[] = [
       {
         id: 'space3',
         bg: 'from-purple-900 to-violet-800',
+        animatedBg: 'linear-gradient(135deg, #4a044e, #4c1d95, #6b21a8, #3b0764, #1e1b4b)',
         title: 'Planets',
         scene: '🪐🌍🪐',
         description: 'So many planets to discover!',
@@ -254,6 +265,7 @@ export const themes: Theme[] = [
       {
         id: 'space4',
         bg: 'from-slate-900 to-blue-900',
+        animatedBg: 'linear-gradient(135deg, #0f172a, #1e3a8a, #1e1b4b, #0c4a6e, #172554)',
         title: 'Alien Friends',
         scene: '👾🛸👾',
         description: 'Friendly aliens say hello!',
@@ -267,6 +279,7 @@ export const themes: Theme[] = [
     bg: 'from-cyan-400 via-blue-400 to-teal-500',
     accent: 'text-blue-900',
     buttonBg: 'bg-blue-500',
+    animatedBg: 'linear-gradient(135deg, #22d3ee, #38bdf8, #0e7490, #06b6d4, #0369a1)',
     items: [
       {
         id: 'fish',
@@ -345,6 +358,7 @@ export const themes: Theme[] = [
       {
         id: 'ocean1',
         bg: 'from-cyan-500 to-blue-600',
+        animatedBg: 'linear-gradient(135deg, #06b6d4, #0284c7, #0e7490, #0369a1, #22d3ee)',
         title: 'Under the Sea',
         scene: '🐠🐡🐟',
         description: 'Colorful fish swim by!',
@@ -352,6 +366,7 @@ export const themes: Theme[] = [
       {
         id: 'ocean2',
         bg: 'from-blue-500 to-teal-600',
+        animatedBg: 'linear-gradient(135deg, #3b82f6, #0d9488, #0284c7, #0f766e, #38bdf8)',
         title: 'Big Whale',
         scene: '🐳💧🐳',
         description: 'The whale splashes big waves!',
@@ -359,6 +374,7 @@ export const themes: Theme[] = [
       {
         id: 'ocean3',
         bg: 'from-teal-400 to-emerald-600',
+        animatedBg: 'linear-gradient(135deg, #2dd4bf, #059669, #0d9488, #34d399, #10b981)',
         title: 'Coral Reef',
         scene: '🐙🦀🐚',
         description: 'Sneaky octopus hides!',
@@ -366,6 +382,7 @@ export const themes: Theme[] = [
       {
         id: 'ocean4',
         bg: 'from-sky-400 to-blue-500',
+        animatedBg: 'linear-gradient(135deg, #38bdf8, #3b82f6, #0ea5e9, #2563eb, #7dd3fc)',
         title: 'Dolphin Play',
         scene: '🐬🌊🐬',
         description: 'Dolphins love to jump!',
@@ -379,6 +396,7 @@ export const themes: Theme[] = [
     bg: 'from-red-300 via-yellow-200 to-pink-300',
     accent: 'text-red-700',
     buttonBg: 'bg-red-500',
+    animatedBg: 'linear-gradient(135deg, #fca5a5, #fde68a, #f9a8d4, #fb923c, #fdba74)',
     items: [
       {
         id: 'strawberry',
@@ -457,6 +475,7 @@ export const themes: Theme[] = [
       {
         id: 'fruit1',
         bg: 'from-red-300 to-pink-400',
+        animatedBg: 'linear-gradient(135deg, #fca5a5, #f9a8d4, #fb7185, #f472b6, #fda4af)',
         title: 'Yummy Berries',
         scene: '🍓🫐🍒',
         description: 'So sweet and yummy!',
@@ -464,6 +483,7 @@ export const themes: Theme[] = [
       {
         id: 'fruit2',
         bg: 'from-yellow-300 to-orange-400',
+        animatedBg: 'linear-gradient(135deg, #fde68a, #fb923c, #fbbf24, #f97316, #fef08a)',
         title: 'Tropical Fun',
         scene: '🍌🍍🥭',
         description: 'Tropical fruits are the best!',
@@ -471,6 +491,7 @@ export const themes: Theme[] = [
       {
         id: 'fruit3',
         bg: 'from-green-300 to-teal-400',
+        animatedBg: 'linear-gradient(135deg, #86efac, #2dd4bf, #4ade80, #34d399, #a7f3d0)',
         title: 'Watermelon Day',
         scene: '🍉🍈🍏',
         description: 'Cool and refreshing!',
@@ -478,6 +499,7 @@ export const themes: Theme[] = [
       {
         id: 'fruit4',
         bg: 'from-purple-300 to-violet-400',
+        animatedBg: 'linear-gradient(135deg, #d8b4fe, #a78bfa, #c084fc, #818cf8, #e879f9)',
         title: 'Fruit Salad',
         scene: '🍇🍑🍊',
         description: 'Mix them all together!',
